@@ -1,13 +1,21 @@
-
 import React from "react";
-import './../styles/App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from "react-router-dom";
+import Layout from "./Layout";
+import Women from "./Women";
 
-const App = () => {
+function App() {
   return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Layout} />
+        <Route path="/women" component={Women} />
+      </Switch>
+    </Router>
+  );
 }
 
-export default App
+export default App;
