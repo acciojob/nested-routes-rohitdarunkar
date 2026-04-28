@@ -10,10 +10,14 @@ import Women from "./Women";
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={Layout} />
-        <Route path="/women" component={Women} />
-      </Switch>
+      <main>
+        <div>
+          <Switch>
+            <Route exact path="/" component={Layout} />
+            <Route path="/women" component={Women} />
+          </Switch>
+        </div>
+      </main>
     </Router>
   );
 }
